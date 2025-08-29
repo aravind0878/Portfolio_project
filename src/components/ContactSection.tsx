@@ -23,9 +23,10 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: "St. Joseph High School",
-      subtext: "123 Education Street",
-      color: "from-purple-500 to-pink-500"
+      details: "Arha Tuition Center",
+      subtext: "Click to view on maps",
+      color: "from-purple-500 to-pink-500",
+      link: "https://maps.app.goo.gl/gSYfLsnmihLMJERQ7"
     },
     {
       icon: Clock,
@@ -56,7 +57,11 @@ const ContactSection = () => {
               
               <div className="grid sm:grid-cols-2 gap-6 mb-8">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="p-6 border-0 shadow-card bg-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+                  <Card 
+                    key={index} 
+                    className="p-6 border-0 shadow-card bg-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                    onClick={() => info.link && window.open(info.link, '_blank')}
+                  >
                     <div className="flex items-start gap-4">
                       <div className={`w-12 h-12 bg-gradient-to-br ${info.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
                         <info.icon className="w-6 h-6 text-white" />
@@ -95,15 +100,26 @@ const ContactSection = () => {
             <Card className="p-8 border-0 shadow-elegant bg-card">
               <h3 className="text-2xl font-bold text-foreground mb-6">Send a Message</h3>
               
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target as HTMLFormElement);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                const whatsappMessage = `Hi, I'm ${name} (${email}). Subject: ${subject}. Message: ${message}`;
+                window.open(`https://wa.me/919573537573?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+              }}>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Full Name
                     </label>
                     <Input 
+                      name="name"
                       placeholder="Your full name"
                       className="border-border focus:border-primary focus:ring-primary"
+                      required
                     />
                   </div>
                   <div>
@@ -111,9 +127,11 @@ const ContactSection = () => {
                       Email Address
                     </label>
                     <Input 
+                      name="email"
                       type="email"
                       placeholder="your.email@example.com"
                       className="border-border focus:border-primary focus:ring-primary"
+                      required
                     />
                   </div>
                 </div>
@@ -123,8 +141,10 @@ const ContactSection = () => {
                     Subject
                   </label>
                   <Input 
+                    name="subject"
                     placeholder="What is this regarding?"
                     className="border-border focus:border-primary focus:ring-primary"
+                    required
                   />
                 </div>
 
@@ -133,13 +153,15 @@ const ContactSection = () => {
                     Message
                   </label>
                   <Textarea 
+                    name="message"
                     placeholder="Tell me about your learning goals, preferred subjects, or any specific requirements..."
                     rows={5}
                     className="border-border focus:border-primary focus:ring-primary resize-none"
+                    required
                   />
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white py-3">
+                <Button type="submit" className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white py-3">
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </Button>

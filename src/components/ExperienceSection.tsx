@@ -13,14 +13,6 @@ const ExperienceSection = () => {
       icon: BookOpen
     },
     {
-      title: "High School Educator", 
-      school: "St. Joseph High School",
-      duration: "2020 - Present",
-      description: "Advanced curriculum delivery for high school students with emphasis on exam preparation and career guidance.",
-      subjects: ["Advanced Mathematics", "Physics", "Chemistry", "Academic Counseling"],
-      icon: GraduationCap
-    },
-    {
       title: "Evening Tuition Instructor",
       school: "Private Tutoring",
       duration: "2019 - Present", 

@@ -34,7 +34,7 @@ const HeroSection = () => {
               
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Dedicated teacher with 5 years of experience in nurturing young minds. 
-                Specializing in primary and high school education with a passion for 
+                Specializing in primary education with a passion for 
                 creating engaging learning environments.
               </p>
 
@@ -50,11 +50,20 @@ const HeroSection = () => {
               </div>
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-8">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-8"
+                  onClick={() => window.location.href = 'mailto:shylusrinu@gmail.com'}
+                >
                   <Mail className="w-4 h-4 mr-2" />
                   Contact Me
                 </Button>
-                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-primary text-primary hover:bg-primary hover:text-white"
+                  onClick={() => document.getElementById('awards')?.scrollIntoView({ behavior: 'smooth' })}
+                >
                   View Awards
                 </Button>
               </div>

@@ -39,7 +39,7 @@ const AwardsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-education-light to-background">
+    <section id="awards" className="py-20 bg-gradient-to-b from-education-light to-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
