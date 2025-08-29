@@ -29,9 +29,8 @@ const TuitionSection = () => {
   ];
 
   const schedule = [
-    { day: "Monday - Friday", time: "6:00 PM - 9:00 PM", subjects: "All Subjects" },
-    { day: "Saturday", time: "4:00 PM - 8:00 PM", subjects: "Exam Preparation" },
-    { day: "Sunday", time: "10:00 AM - 2:00 PM", subjects: "Group Sessions" }
+    { day: "Monday - Friday", time: "5:00 PM - 7:00 PM", subjects: "All Subjects" },
+    { day: "Saturday", time: "5:00 PM - 7:00 PM", subjects: "Exam Preparation" }
   ];
 
   return (
@@ -141,7 +140,10 @@ const TuitionSection = () => {
                   <p className="text-sm text-muted-foreground mb-4">
                     Contact for personalized pricing based on subjects and frequency
                   </p>
-                  <Button className="w-full bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white">
+                  <Button 
+                    className="w-full bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white"
+                    onClick={() => window.open('https://wa.me/919573537573', '_blank')}
+                  >
                     Get Quote
                   </Button>
                 </div>

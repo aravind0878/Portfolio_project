@@ -9,15 +9,15 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "teacher@stjoseph.edu",
+      details: "shylusrinu@gmail.com",
       subtext: "Response within 24 hours",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Phone,
-      title: "Phone",
-      details: "+1 (555) 123-4567",
-      subtext: "Available 6 PM - 9 PM",
+      title: "WhatsApp",
+      details: "+91 9573537573",
+      subtext: "Available 5 PM - 7 PM",
       color: "from-green-500 to-emerald-500"
     },
     {
@@ -79,9 +79,13 @@ const ContactSection = () => {
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Schedule Tuition Consultation
                   </Button>
-                  <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white">
+                  <Button 
+                    variant="outline" 
+                    className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white"
+                    onClick={() => window.open('https://wa.me/919573537573', '_blank')}
+                  >
                     <Phone className="w-4 h-4 mr-2" />
-                    Request Callback
+                    WhatsApp Call
                   </Button>
                 </div>
               </Card>

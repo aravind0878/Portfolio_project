@@ -25,7 +25,7 @@ const HeroSection = () => {
             {/* Profile Content */}
             <div className="text-center lg:text-left">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Welcome to My <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Teaching Portfolio</span>
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Banda Shylaja</span>
               </h1>
               
               <div className="text-xl text-education-accent font-semibold mb-2">

@@ -41,15 +41,15 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-accent" />
-                  <span className="text-white/80">teacher@stjoseph.edu</span>
+                  <span className="text-white/80">shylusrinu@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-accent" />
-                  <span className="text-white/80">+1 (555) 123-4567</span>
+                  <span className="text-white/80">+91 9573537573</span>
                 </div>
                 <div className="text-sm text-white/60 mt-4">
                   <p><strong>School Hours:</strong> Mon-Fri 8 AM - 3 PM</p>
-                  <p><strong>Tuition Hours:</strong> Mon-Fri 6 PM - 9 PM</p>
+                  <p><strong>Tuition Hours:</strong> Mon-Sat 5 PM - 7 PM</p>
                 </div>
               </div>
             </div>
