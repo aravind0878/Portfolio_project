@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
-import profileImage from "@/assets/teacher-profile.jpg";
+const profileImage = "/lovable-uploads/bae60ee6-dab2-49af-83eb-b6c77da8956d.png";
 
 const HeroSection = () => {
   return (
